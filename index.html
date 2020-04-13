@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!--点按钮显示的js-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.bootcss.com/font-awesome/5.11.2/js/all.min.js"></script>
+    <!--文本框的js-->
+
+
+
+    <title>师门树</title>
+
+</head>
+<style>
+    @font-face {
+        font-family: 'firefly';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        height: 100vh;
+        background: url(sms.bmp) no-repeat;
+        background-size: cover;
+    }
+    ul {
+        list-style: none;
+    }
+    button {
+        top: 20%;
+        left: 10%;
+        outline: none;
+        border: none;
+    }
+    .firefly {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly;
+        opacity: .88;
+    }
+    .lightning {
+        width: 95%;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 40px;
+        transition: .8s;
+        overflow: hidden;
+    }
+    .firefly:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+    .lightning ul {
+        opacity: 0;
+        transition: .8s;
+    }
+    .firefly:hover ul {
+        opacity: .8;
+    }
+    .lightning ul li {
+        width: 5px;
+        height: 5px;
+        background-color: #91FA91;
+        position: absolute;
+        bottom: 10%;
+        border-radius: 50%;
+        opacity: .6;
+        animation: fireflymove infinite linear;
+    }
+    @keyframes fireflymove {
+        100% {
+            bottom: 100%;
+        }
+    }
+
+
+
+</style>    <!--17计科-->
+
+<style>
+    @font-face {
+        font-family: 'firefly2';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+
+    .firefly2 {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly2:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly2 p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly2;
+        opacity: .88;
+    }
+
+    .firefly2:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+
+
+
+
+
+
+
+</style>    <!--彭老师-->
+
+<style>
+    @font-face {
+        font-family: 'firefly22';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+
+    .firefly22 {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly22:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly22 p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly22;
+        opacity: .88;
+    }
+
+    .firefly22:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+
+    .firefly22:hover ul {
+        opacity: .8;
+    }
+
+    @keyframes firefly22move {
+        100% {
+            bottom: 100%;
+        }
+    }
+
+
+
+</style>    <!--廖老师-->
+
+<style>
+    @font-face {
+        font-family: 'firefly3';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+
+    .firefly3 {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly3:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly3 p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly3;
+        opacity: .88;
+    }
+
+    .firefly3:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+
+
+
+
+
+</style>    <!--17级本科生刘丙亮-->
+
+<style>
+    @font-face {
+        font-family: 'firefly33';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+
+    .firefly33 {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly33:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly33 p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly33;
+        opacity: .88;
+    }
+
+    .firefly33:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+
+
+
+
+</style>    <!--16级研究生刘强-->
+
+<style>
+    @font-face {
+        font-family: 'firefly4';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+
+    .firefly4 {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly4:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly4 p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly4;
+        opacity: .88;
+    }
+
+    .firefly4:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+
+
+
+
+</style>    <!--15级博士生谭鑫-->
+
+<style>
+    @font-face {
+        font-family: 'firefly44';
+        src: url(ZCOOLKuaiLe-Regular.ttf);
+    }
+
+    .firefly44 {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #6EB46E 10%, #55B455);
+        border-radius: 40px;
+        opacity: .88;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .firefly44:hover {
+        box-shadow: 0 0 10px #B4FFB4;
+    }
+    .firefly44 p {
+        line-height: 60px;
+        font-size: 22px;
+        color: #F5DD8F;
+        font-family: firefly44;
+        opacity: .88;
+    }
+
+    .firefly44:hover .lightning {
+        box-shadow: 0 0 4px #B4FFB4 inset;
+    }
+
+
+
+
+</style>    <!--15级研究生陈宣任-->
+
+<body>
+
+<div class="search-box">
+    <input class="search-txt" type="text" name="" placeholder="输入信息">
+    <button class="search-btn" href="#">
+
+        <i class="fas fa-search"></i>
+
+    </button>
+</div>
+
+<div>
+
+    <div id="first">
+        <button class="firefly">
+        <p>计科二班师门树</p>
+        <div class="lightning">
+        </div>
+    </button>
+    </div>
+
+    <div id="second" style="display: none;">
+        <button class="firefly2">
+            <p>导师：彭老师</p>
+            <div class="lightning">
+
+            </div>
+        </button>
+    </div>
+
+    <div id="second2" style="display: none;">
+        <button class="firefly22">
+            <p>导师：廖老师</p>
+            <div class="lightning">
+
+            </div>
+        </button>
+    </div>
+
+    <div id="third" style="display: none;">
+        <button class="firefly3">
+        <p>17级本科生刘丙亮</p>
+        <div class="lightning">
+
+        </div>
+    </button>
+    </div>
+
+    <div id="third2" style="display: none;">
+        <button class="firefly33">
+            <p>16级研究生刘强</p>
+            <div class="lightning">
+
+            </div>
+        </button>
+    </div>
+
+    <div id="third3" style="display: none;">
+        <button class="firefly4">
+            <p>15级博士生谭鑫</p>
+            <div class="lightning">
+
+            </div>
+        </button>
+    </div>
+
+    <div id="third4" style="display: none;">
+        <button class="firefly44">
+            <p>15级研究生陈宣任</p>
+            <div class="lightning">
+
+            </div>
+        </button>
+    </div>
+
+
+</div>
+
+</body>
+
+
+
+<script type="text/javascript">
+
+
+    $(document).ready(function(){
+
+        $("#first").click(function(){
+
+            $("#second").slideToggle("fast","swing");
+            $("#second2").slideToggle("fast","swing");
+
+        });
+
+    });
+
+
+    $(document).ready(function(){
+
+        $("#second").click(function(){
+
+            $("#third").slideToggle("fast","swing");
+            $("#third2").slideToggle("fast","swing");
+
+        });
+
+    });
+
+
+    $(document).ready(function(){
+
+        $("#second2").click(function(){
+
+            $("#third3").slideToggle("fast","swing");
+            $("#third4").slideToggle("fast","swing");
+
+        });
+
+    });
+
+
+</script>
+</html>
